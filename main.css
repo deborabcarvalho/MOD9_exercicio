@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+#container{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+
+form{
+    padding: 24px 0;
+    text-align: center;
+}
+
+
+input, button{
+    padding: 8px;
+}
+
+button{
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+ul{
+    justify-content: center;
+    align-items: center;
+}
+
+ul.lista-tarefas li {
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+}
