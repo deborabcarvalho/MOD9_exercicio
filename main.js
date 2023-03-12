@@ -3,11 +3,15 @@ $(document).ready(function(){
     $('form').on('submit', function(e){
         e.preventDefault();
         const novaTarefa = $('#nova-tarefa').val();
-        $('ul').append('<li>' + novaTarefa + '</li>');
-        $('#nova-tarefa').val('');
-    });
+        const tarefaNaLista = $('<li></li>');
 
-    $(".lista-tarefas").click("li", function() {
-        $(`<li style="text-decoration: line-through;"></li>`)
-    })
+        $('<li>' + novaTarefa + '</li>').appendTo(tarefaNaLista);
+        tarefaNaLista.appendTo('ul');
+
+        $(tarefaNaLista).click(function() {
+            $(tarefaNaLista).css('text-decoration', 'line-through');
+        })
+        
+        $('#nova-tarefa').val('');
+    });   
 });
